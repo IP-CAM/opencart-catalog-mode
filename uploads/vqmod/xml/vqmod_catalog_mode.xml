@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Catalog Mode</id>
+	<version>2.2.x and above</version>
+	<vqmver required="true">2.5.0</vqmver>
+	<author>Nidhin</author>
+	
+	<file name="catalog/view/theme/default/template/common/header.tpl">
+		<operation error="skip" info="Remove Account Details from Header 1">
+			<search position="replace"><![CDATA[
+        		<li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 2">
+			<search position="replace"><![CDATA[
+        		<ul class="dropdown-menu dropdown-menu-right">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>	
+		<operation error="skip" info="Remove Account Details from Header 3">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 4">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 5">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 6">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 7">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 8">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 9">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 10">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 11">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_shopping_cart; ?></span></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 12">
+			<search position="replace"><![CDATA[
+        		<li><a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_checkout; ?></span></a></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 13">
+			<search position="replace"><![CDATA[
+        		 <div class="col-sm-3"><?php echo $cart; ?></div>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 14">
+			<search position="replace"><![CDATA[
+        		 <div class="col-sm-5"><?php echo $search; ?>
+				]]></search>
+			<add><![CDATA[<div class="col-sm-8"><?php echo $search; ?>]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Header 14">
+			<search position="replace"><![CDATA[
+        		 <?php echo $currency; ?>	
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>	
+	</file>
+	<file name="catalog/view/theme/default/template/module/featured.tpl">
+		<operation error="skip" info="Remove Account Details from Featured 1">
+			<search position="replace"><![CDATA[
+        		<button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Featured 2">
+			<search position="replace"><![CDATA[
+        		<button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>	
+		<operation error="skip" info="Remove Account Details from Featured 3">
+			<search position="replace"><![CDATA[
+        		<button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Featured 4">
+			<search position="replace"><![CDATA[
+        		<?php echo $product['price']; ?>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Featured 5">
+			<search position="replace"><![CDATA[
+        		<span class="price-new"><?php echo $product['special']; ?></span>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Featured 6">
+			<search position="replace"><![CDATA[
+        		<span class="price-old"><?php echo $product['price']; ?></span>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Featured 7">
+			<search position="replace"><![CDATA[
+        		<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>				
+	</file>	
+	<file name="catalog/view/theme/default/template/product/category.tpl">
+		<operation error="skip" info="Remove Account Details from Featured 1">
+			<search position="replace"><![CDATA[
+        		<p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from category 1">
+			<search position="replace"><![CDATA[
+        		<button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from category 2">
+			<search position="replace"><![CDATA[
+        		<button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>	
+		<operation error="skip" info="Remove Account Details from category 3">
+			<search position="replace"><![CDATA[
+        		<button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from category 4">
+			<search position="replace"><![CDATA[
+        		<?php echo $product['price']; ?>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from category 5">
+			<search position="replace"><![CDATA[
+        		<span class="price-new"><?php echo $product['special']; ?></span>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from category 6">
+			<search position="replace"><![CDATA[
+        		<span class="price-old"><?php echo $product['price']; ?></span>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from category 7">
+			<search position="replace"><![CDATA[
+        		<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from category 8">
+			<search position="replace"><![CDATA[
+        		<label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>	
+		<operation error="skip" info="Remove Account Details from category 9">
+			<search position="replace" offset="8"><![CDATA[
+        		<select id="input-sort" class="form-control" onchange="location = this.value;">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from category 9">
+			<search position="replace" offset="25"><![CDATA[
+        		<?php if ($categories) { ?>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>				
+	</file>	
+	<file name="catalog/view/theme/default/template/product/product.tpl">
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="3"><![CDATA[
+        		<div class="btn-group">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace"><![CDATA[
+        		<li><?php echo $text_reward; ?> <?php echo $reward; ?></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace"><![CDATA[
+        		<li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="27"><![CDATA[
+        		<?php if ($price) { ?>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="151"><![CDATA[
+        		<div id="product">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>	
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="4"><![CDATA[
+        		<div class="button-group">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="22"><![CDATA[
+        		<?php if ($product['rating']) { ?>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>						
+	</file>	
+	<file name="catalog/view/theme/default/template/product/manufacturer_info.tpl">
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace"><![CDATA[
+        		<p><a href="<?php echo $compare; ?>" id="compare-total"> <?php echo $text_compare; ?></a></p>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace"><![CDATA[
+        		<label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="8"><![CDATA[
+        		<select id="input-sort" class="form-control col-sm-3" onchange="location = this.value;">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="11"><![CDATA[
+        		<?php if ($product['price']) { ?>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="4"><![CDATA[
+        		<div class="button-group">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/default/template/product/search.tpl">
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace"><![CDATA[
+        		<p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace"><![CDATA[
+        		<label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="8"><![CDATA[
+        		<select id="input-sort" class="form-control col-sm-3" onchange="location = this.value;">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="11"><![CDATA[
+        		<?php if ($product['price']) { ?>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+		<operation error="skip" info="Remove Account Details from Products 1">
+			<search position="replace" offset="4"><![CDATA[
+        		<div class="button-group">
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>	
+	<file name="catalog/view/theme/default/template/common/footer.tpl">
+		<operation error="skip" info="Remove Account Details from Footer 1">
+			<search position="replace" offset="6"><![CDATA[
+        		<h5><?php echo $text_account; ?></h5>
+				]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>		
+</modification>
