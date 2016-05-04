@@ -2,7 +2,7 @@
 Catalog mode : A simple VQmod Extension for Opencart 2.2.x
 This extension removes all references of Accounts, Wishlists, Cart, Product Compare etc.<br/>
 This requires Vqmod 2.5.0 and tested on default theme only. On custom themes it may not work properly.<br/>
-But you can modify this extension to work on custom themes eaisly. <br/>
+But you can modify this extension to work on custom themes easily. <br/>
 
 You have to modify these files using Vqmod to remove all references of Accounts, Wishlists, Cart, Product Compare etc.<br/>
 catalog/view/theme/default/template/common/header.tpl<br/>
